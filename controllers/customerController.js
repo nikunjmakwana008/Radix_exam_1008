@@ -11,9 +11,9 @@ const multer = require('multer');
 exports.getAllCustomers = catchAsync( async (req, res, next) => {
 
 
-    // const page = req.query.page * 1 || 1;
-    // const limit = req.query.limit * 1 || 100;
-    // const skip = (page - 1) * limit;
+    const page = req.query.page * 1 || 1;
+    const limit = req.query.limit * 1 || 100;
+    const skip = (page - 1) * limit;
    
     const customer = await Customer.find(req.query).skip(skip).limit(limit);
 
