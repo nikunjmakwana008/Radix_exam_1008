@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "17c13b45-55aa-4903-9092-0c713ad0be38",
+		"name": "Radix_exam_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24846895"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"email\": \"niksmakwana111234@gmail.com\",\n        \"password\": \"123456789\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Nikunj12\",\n        \"email\": \"niksmakwana23@gmail.com\",\n        \"password\": \"123456789\",\n        \"phone\": \"9876543219\",\n        \"address\": \"G404 malabar county 1\",\n        \"gender\":\"male\",\n        \"photo\":\"nikunj.jpg\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MzYwM2RhZTU3YmYwMTAxMjE4N2U4ZSIsImlhdCI6MTcxNDgxNTk2MiwiZXhwIjo5NDkwODE1OTYyfQ.Xn3RWZrYxVRgFeu0C3j28gHAmSacjaZInVdN4k4v0Po",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Nikunj12\",\n        \"email\": \"niksmakwana1127@gmail.com\",\n        \"password\": \"123456789\",\n        \"phone\": \"9876543219\",\n        \"address\": \"G404 malabar county 1\",\n        \"gender\":\"male\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/customers/6635eee2a266746e0594db0a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"customers",
+						"6635eee2a266746e0594db0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Nikunj123\",\n        \"email\": \"niksmakwana11@gmail.com\",\n        \"password\": \"123456789\",\n        \"phone\": \"9876543219\",\n        \"address\": \"G404 malabar county 1\",\n        \"gender\":\"male\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/customers/6635f769a43f64822ca4dbdd",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"customers",
+						"6635f769a43f64822ca4dbdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Nikunj123\",\n        \"email\": \"niksmakwana11@gmail.com\",\n        \"password\": \"123456789\",\n        \"phone\": \"9876543219\",\n        \"address\": \"G404 malabar county 1\",\n        \"gender\":\"male\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/customers/6635f769a43f64822ca4dbdd",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"customers",
+						"6635f769a43f64822ca4dbdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Nikunj123\",\n        \"email\": \"niksmakwana11@gmail.com\",\n        \"password\": \"123456789\",\n        \"phone\": \"9876543219\",\n        \"address\": \"G404 malabar county 1\",\n        \"gender\":\"male\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/customers/profile/663623e91d7a7a047ee815ee",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"customers",
+						"profile",
+						"663623e91d7a7a047ee815ee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
